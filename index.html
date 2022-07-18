@@ -1,60 +1,35 @@
-<div id="playground"></div>
-
-<!-- https://github.com/CleverProgrammers/JavaScript-Course-by-Clever-Programmer-  -->
-
 <!DOCTYPE html>
 <html>
-
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
-
-
-<body>
-  <h2>Official Github REPO (🌟 Go Star This ♥️)</h2>
-  <p>👉 <a href="https://github.com/CleverProgrammers/JavaScript-Course-by-Clever-Programmer-">JavaScript Course by Clever Programmer (Github Repo)</a></p>
-  <p>Let's get this trending 🚀</p>
-  <h3>Lessons</h3>
-  <a href="dom/red-yellow-green/index.html">DOM - Red Yellow Green Squares</a>
-  </br>
-  <a href="api/dogRandom/index.html">API - Get Random Dog</a>
-  </br>
-  <a href="api/superHero/index.html">API - Get Super Heroes</a></br>
-  <a href="classes/banksClass/index.html">Classes - Bank with Deposit & Withdraw Methods</a>
-
-  <h3>Project Exercises</h3>
-  <a href='projects/stopwatch/exercise/index.html'>Stopwatch</a><br>
-  <a href='projects/rockpaperscissors/exercise/index.html'>Rock Paper Scissors</a><br>
-  <a href='projects/fightingGame/exercise/index.html'>Figthing Game</a> <br>
-  <a href='projects/tip-calculator/exercise/index.html'>Tip Calculator</a>
-  <br>
-  <a href='projects/weather-app/exercise/index.html'>Weather App</a><br>
-  <a href='projects/advanced-weather-app/exercise/index.html'>Advanced Weather App</a><br>
-  <a href='projects/create-netflix/exercise/index.html'>Create Netflix</a>
-
-  <h3>Project Solutions</h3>
-  <a href='projects/stopwatch/solution/index.html'>Stopwatch</a><br>
-  <a href='projects/rockpaperscissors/solution/index.html'>Rock Paper Scissors</a><br>
-  <a href='projects/fightingGame/solution/index.html'>Fighting Game</a></br>
-  <a href='projects/tip-calculator/solution/index.html'>Tip Calculator</a>
-  <br>
-  <a href='projects/weather-app/solution/index.html'> Weather App</a><br>
-  <a href='projects/advanced-weather-app/solution/index.html'>Advanced Weather App</a>
-  </br>
-  <a href='projects/create-netflix/solution/index.html'>Create Netflix</a>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.6.2/standalone.js"></script>
-<script src="playground.js"></script>
-
-  <script src="yourPlayground.js"></script>
-  <script src="exercises/converthourstoseconds.js"></script>
+<body class="text-center">
+    <main>
+        <h1 class="banner p-3">Weather</h1>
+        <div class="form-group">
+            <input id="city-input" class="form-control form-control-lg" type="text" placeholder="Search city">
+        </div>
+        <button type="button" onclick="searchCity()" class="btn btn-lg btn-dark">Search</button>
+        <div id="weather-output" class="mt-3">
+          <div class="card-deck mb-3 text-center">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 id="city-name" class="my-0 font-weight-normal">----</h4>
+                </div>
+                <div class="card-body">
+                  <h1 id="weather-type" class="card-title">----</h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Temp: <span id="temp">--</span>°</li>
+                    <li>Min Temp: <span id="min-temp">--</span>°</li>
+                    <li>Max Temp: <span id="max-temp">--</span>°</li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+    </main>
 </body>
-
 </html>
